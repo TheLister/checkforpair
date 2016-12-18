@@ -4,6 +4,7 @@
 
 $isfirst = true;
 $goalsum = 8;
+echo $goalsum;
 $foundamatch = false;
 $seen = array();
 function ConvertToInt() {
@@ -26,7 +27,7 @@ function SearchForPair() {
 	echo PHP_EOL;
 
 	//check for partner in seen array;
-	if (in_array($value, $seen)) {
+	if (in_array($partner, $seen)) {
 	    echo 'Got a match! ' . "$value plus $partner = $goalsum!!!!";
 		$foundamatch = true;
 	} else {
@@ -69,14 +70,5 @@ foreach ($argv as $value) {
 	echo PHP_EOL;
 }
 echo PHP_EOL;
-
-
-
-
-// next($argv);  // Advance pointer to 1
-//
-// while (list($key, $val) = each($argv)) {
-//   echo "$key => $val\n";
-// }
 
  ?>
